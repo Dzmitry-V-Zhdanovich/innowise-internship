@@ -101,7 +101,7 @@ public class MyLinkedList<T> {
         if (tail == null) {
             throw new IllegalStateException("List is empty");
         }
-        T data = tail.data;;
+        T data = tail.data;
         tail = tail.previous;
         if (tail != null) {
             tail.next = null;
