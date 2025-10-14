@@ -9,4 +9,16 @@ public class Order {
     private Customer customer;
     private List<OrderItem> items;
     private OrderStatus status;
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public OrderStatus getStatus() {
+        return status;
+    }
+
+    public List<OrderItem> getItems() {
+        return items;
+    }
 }

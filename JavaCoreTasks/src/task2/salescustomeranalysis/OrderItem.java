@@ -5,4 +5,16 @@ public class OrderItem {
     private int quantity;
     private double price;
     private Category category;
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public double getPrice() {
+        return price;
+    }
 }

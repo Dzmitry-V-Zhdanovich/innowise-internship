@@ -9,4 +9,8 @@ public class Customer {
     private LocalDateTime registeredAt;
     private int age;
     private String city;
+
+    public String getCity() {
+        return city;
+    }
 }
