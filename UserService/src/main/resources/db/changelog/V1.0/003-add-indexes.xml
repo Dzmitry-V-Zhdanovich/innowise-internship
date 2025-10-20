@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="add-indexes" author="Dzmitry">
+        <!-- Индекс для поиска по email -->
+        <createIndex indexName="idx_users_email" tableName="users">
+            <column name="email"/>
+        </createIndex>
+
+        <!-- Индекс для поиска пользователей по имени и фамилии -->
+        <createIndex indexName="idx_users_name_surname" tableName="users">
+            <column name="name"/>
+            <column name="surname"/>
+        </createIndex>
+
+        <!-- Индекс для связи card_info с users -->
+        <createIndex indexName="idx_card_info_user_id" tableName="card_info">
+            <column name="user_id"/>
+        </createIndex>
+
+        <!-- Индекс для номера карты  -->
+        <createIndex indexName="idx_card_info_number" tableName="card_info" unique="true">
+            <column name="number"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>
